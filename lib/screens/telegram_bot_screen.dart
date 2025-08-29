@@ -13,10 +13,15 @@ class TelegramBotScreen extends StatefulWidget {
 }
 
 class _TelegramBotScreenState extends State<TelegramBotScreen> {
-  // Controladores
-  final TextEditingController _tokenController = TextEditingController();
-  final TextEditingController _chatIdController = TextEditingController();
-  final TextEditingController _messageController = TextEditingController();
+  final TextEditingController _tokenController = TextEditingController(
+    text: "8418581740:AAGRvp8eJ7Zjax_CKUiDI-5vWDxBwNRV_fg", // Valor por defecto
+  );
+  final TextEditingController _chatIdController = TextEditingController(
+    text: "1796672690", // Valor por defecto
+  );
+  final TextEditingController _messageController = TextEditingController(
+    text: "Hola, este es un mensaje de prueba aaa", // Valor por defecto
+  );
 
   // Clave del formulario para validaciones
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
@@ -135,13 +140,6 @@ class _TelegramBotScreenState extends State<TelegramBotScreen> {
               ),
 
               const SizedBox(height: 16),
-
-              // // Botón para validar bot (opcional)
-              // TextButton.icon(
-              //   onPressed: _isLoading ? null : _validateBot,
-              //   icon: const Icon(Icons.verified),
-              //   label: const Text('Validar Bot'),
-              // ),
 
               const SizedBox(height: 16),
 
